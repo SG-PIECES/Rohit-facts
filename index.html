@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts about Rohit Sharma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #fact-display {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts about Rohit Sharma</h1>
+        <button id="random-fact-button">Show Random Fact</button>
+        <p id="fact-display"></p>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Record Holder",
+                "description": "Rohit Sharma holds the record for the highest individual score in One Day Internationals (ODIs), scoring 264 runs against Sri Lanka in 2014."
+            },
+            {
+                "fact": "Captaincy Success",
+                "description": "He has been highly successful as the captain of the Mumbai Indians in the Indian Premier League (IPL), leading the team to multiple championships."
+            },
+            {
+                "fact": "Opening Specialist",
+                "description": "Rohit is known for his exceptional ability as an opening batsman in limited-overs cricket, often providing solid starts for his team."
+            },
+            {
+                "fact": "T20 World Cup",
+                "description": "He was part of the Indian squad that reached the finals of the T20 World Cup in 2007, which was the inaugural edition of the tournament."
+            },
+            {
+                "fact": "Double Centurion",
+                "description": "Rohit is the only player to have scored three double centuries in ODIs, showcasing his ability to play long innings."
+            },
+            {
+                "fact": "International Debut",
+                "description": "He made his international debut for India in 2007 in a T20 match against South Africa."
+            },
+            {
+                "fact": "Versatile Batsman",
+                "description": "Rohit is known for his versatility, being able to adapt his batting style to different formats of the game, whether it's Test, ODI, or T20."
+            },
+            {
+                "fact": "Outstanding Record in IPL",
+                "description": "He is one of the highest run-scorers in IPL history, consistently performing well season after season."
+            },
+            {
+                "fact": "Nickname",
+                "description": "Rohit is often referred to as 'Hitman' due to his aggressive batting style and ability to hit big sixes."
+            },
+            {
+                "fact": "Philanthropy",
+                "description": "Off the field, Rohit Sharma is known for his philanthropic efforts, supporting various causes and initiatives aimed at helping underprivileged children and communities."
+            }
+        ];
+
+        const button = document.getElementById('random-fact-button');
+        const factDisplay = document.getElementById('fact-display');
+
+        button.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const randomFact = facts[randomIndex];
+            factDisplay.innerHTML = `<strong>${randomFact.fact}</strong>: ${randomFact.description}`;
+        });
+    </script>
+</body>
+</html>
